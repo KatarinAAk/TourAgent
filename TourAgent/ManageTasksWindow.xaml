@@ -1,0 +1,23 @@
+﻿<Window x:Class="TourAgent.ManageTasksWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:TourAgent"
+        mc:Ignorable="d"
+        Title="Управление задачами" Height="300" Width="400">
+    <Grid>
+        <StackPanel>
+            <Label Content="Описание задачи:"/>
+            <TextBox x:Name="taskDescriptionTextBox"/>
+            <Label Content="Тип задачи:"/>
+            <ComboBox x:Name="taskTypeComboBox"/>
+            <Label Content="Дата выполнения задания:"/>
+            <DatePicker x:Name="taskDatePicker"/>
+            <Button Content="Добавить задачу" Click="AddTaskButton_Click"/>
+            <DataGrid x:Name="taskDataGrid" AutoGenerateColumns="True"/>
+            <Button Content="Завершите задачу" Click="CompleteTaskButton_Click"/>
+            <Button Content="Назад" Click="BackButton_Click"/>
+        </StackPanel>
+    </Grid>
+</Window>

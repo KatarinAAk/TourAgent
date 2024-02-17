@@ -1,0 +1,21 @@
+﻿<Window x:Class="TourAgent.GenerateReportWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:TourAgent"
+        mc:Ignorable="d"
+       Title="Сгенерировать отчет" Height="300" Width="400">
+    <Grid>
+        <StackPanel>
+            <Label Content="Дата начала:"/>
+            <DatePicker x:Name="startDatePicker" />
+            <Label Content="Дата Окончания:"/>
+            <DatePicker x:Name="endDatePicker" />
+            <Button Content="Сгенерировать отчет" Click="GenerateReportButton_Click" />
+            <DataGrid x:Name="dataGrid" AutoGenerateColumns="True" />
+            <Button Content="Сохранить отчет" Click="SaveReport_Click"/>
+            <Button Content="Назад" Click="BackButton_Click"/>
+        </StackPanel>
+    </Grid>
+</Window>

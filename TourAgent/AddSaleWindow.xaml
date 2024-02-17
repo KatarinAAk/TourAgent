@@ -1,0 +1,22 @@
+﻿<Window x:Class="TourAgent.AddSaleWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:TourAgent"
+        mc:Ignorable="d"
+        Title="Add Sale" Height="300" Width="400">
+    <Grid>
+        <StackPanel>
+            <Label Content="Имя клиента:"/>
+            <TextBox x:Name="clientNameTextBox" />
+            <Label Content="Идентификатор туристического пакета:"/>
+            <TextBox x:Name="tourPackageIDTextBox" />
+            <Label Content="Дата продажи:"/>
+            <DatePicker x:Name="saleDatePicker" />
+            <Button Content="Добавить продажу" Click="AddSaleButton_Click" />
+            <DataGrid x:Name="tourDataGrid" AutoGenerateColumns="True" />
+            <Button Content="Назад" Click="BackButton_Click"/>
+        </StackPanel>
+    </Grid>
+</Window>
